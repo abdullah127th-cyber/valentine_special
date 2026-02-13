@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hug Day — Hadia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="hug">
+
+<header class="header">
+  <div class="brand">Pookiee 🤗<small>— Hug Day</small></div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <button id="audioControl">Play ♫</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="hero-left">
+      <h2 class="h-title reveal">One giant long-distance hug</h2>
+      <div class="h-sub reveal" data-type="If I could, I would fold the miles like paper and place myself beside you."></div>
+
+      <p class="paragraph reveal">
+        Close your eyes and breathe for me — imagine my arms💞💗🥺, clumsy and sincere🫠😘💘💓💓, wrapping around you.💓😘💝💞💞
+         That feeling is the best part of my day💞💝💌💌💗.
+         Haduu, even though💗💘🫠🫠🫠💝 we haven’t met yet and are miles apart💗💟💟💕, I feel you close to me every single day💝💓💞. Pablooo, sometimes 💟💕I close my eyes and imagine hugging you💕💌💌💞💞💓 so tight that all the distance disappears🥺🥺💟💕💌, and the world feels perfect for a moment. Hayatii, I miss you more than words can say, and until the day I can hold you for real, my voice, my words, and all my love will try to give you a warm hug every time. Jaan b, I promise that when we finally meet, our first hug will be full of everything we’ve been waiting for — love, comfort, and endless happiness. And every hug after that will be mine just for you, forever. 🤍✨
+      </p>
+
+      <div class="links reveal">
+        <a class="link-btn" href="index.html">⬅ Back Home</a>
+      </div>
+    </div>
+
+    <aside class="hero-right">
+      <div class="card reveal">
+        <div class="sm">
+          Counting the days until we hug for real💌💗💝💝💞. Until then, this page holds the💞💞💝💗🫠💓 place for my arms.
+        </div>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<audio id="bgm" src="song3.mp3" loop preload="none"></audio>
+
+<!-- ✅ Play / Pause Script Added -->
+<script>
+const audio = document.getElementById("bgm");
+const btn = document.getElementById("audioControl");
+
+btn.addEventListener("click", function() {
+  if (audio.paused) {
+    audio.play();
+    btn.textContent = "Pause ❚❚";
+  } else {
+    audio.pause();
+    btn.textContent = "Play ♫";
+  }
+});
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
