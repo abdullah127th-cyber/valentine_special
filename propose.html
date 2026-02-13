@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Propose Day — Hadia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="propose">
+
+<header class="header">
+  <div class="brand">Pookiee 💍<small>— Propose Day</small></div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="valentine.html">Valentine</a>
+    <button id="audioControl">Play ♫</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="hero-left">
+      <h2 class="h-title reveal">Will you be mine, Hadia?</h2>
+      <div class="h-sub reveal" data-type="Not with a ring on a screen — but with every promise I can keep, starting now."></div>
+
+      <p class="paragraph reveal">
+        Even though you already have a special place in my heart as Mari Future Wifeyy💓😘🫠💖💗💓💞, today I want to ask you again…🥺🥺🥺💝💝 
+        just to remind you how deeply I am in love with you💝💝💝💘💘💞💞💌.
+         Pabloo, sometimes 💕💌💌💘🫠💖I catch myself smiling for no reason,
+          imagining holding you close💖🫠💘💌💕💌, feeling your warmth💌💌💘💓💓, and seeing
+           that little sparkle in your eyes💓💗💓💌🥺💝. Cuteoo, every time
+            I think of you💝🥺🫠💖, I want to get down on one knee and🫠💖💌💓 say all🥺🥺💖💌💘💗💗
+             the things I feel — the things words can’t really💗💝💕💕 capture —
+              just to make sure you know how much you mean to me💞💞💕💕💝💝.
+
+Haduu, one day, I will finally get to show you everything
+ I’ve been holding in my heart🥺🥺💕💞💗💘💖💖💌💘. Until then, let this be my little secret…💗💘💌💖 my heart keeps proposing to you, over and over💌💖💗💗💓💝💖💘, in every thought, every smile, and every beat💝💖💓💓💕💞💌💌. 💖
+      </p>
+
+      <p class="paragraph reveal">
+        If forever is a long road💓💞💕, I’ll choose to walk it at your side💞💌🥺🥺💗.
+      </p>
+
+      <div class="links reveal">
+        <a class="link-btn" href="index.html">⬅ Back Home</a>
+      </div>
+    </div>
+
+    <aside class="hero-right">
+      <div class="card reveal">
+        <div class="sm">
+          You can look up at the sky and see the moon🫠💘…
+But for me, I don’t need to look far💌😘 — I see my moon in your eyes💕💓💓💓💓.
+The stars try to shine💕💞💞💝, but they pale next to your smile🫠🫠💌💝💞.
+Every time I look at you💕💕💞💝💗💗, the world feels softer, brighter, and mine.
+Pabloo, my sky, my moon, my everything — all I need is you. 💖.
+        </div>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<audio id="bgm" src="song2.mp3" loop preload="none"></audio>
+
+<!-- ✅ Play / Pause Script Added -->
+<script>
+const audio = document.getElementById("bgm");
+const btn = document.getElementById("audioControl");
+
+btn.addEventListener("click", function() {
+  if (audio.paused) {
+    audio.play();
+    btn.textContent = "Pause ❚❚";
+  } else {
+    audio.pause();
+    btn.textContent = "Play ♫";
+  }
+});
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

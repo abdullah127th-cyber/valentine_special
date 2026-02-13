@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rose Day — Hadia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="rose">
+
+<header class="header">
+  <div class="brand">Pookiee ❤️<small>— Rose Day</small></div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="rose.html">Rose</a>
+    <a href="chocolate.html">Chocolate</a>
+    <a href="valentine.html">Valentine</a>
+    <button id="playToggle" class="play-btn">Play ♫</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="hero-left">
+      <h2 class="h-title reveal">Happy Rose Day, my Cutiee Piee 🌹</h2>
+      <div class="h-sub reveal" data-type="If I could, I’d press a rose into every page of your life so you could smell how much you mean to me."></div>
+
+      <p class="paragraph reveal">
+        Haduu, if I could, I would send you a real rose today. Not just one… but a whole bunch of them. Since I can’t place it in your hands, I’m placing it here — on this page — for🌹🌹you.
+
+This rose is not just a flower. It’s my feelings. It’s my respect. It’s my love for you. Every petal carries something I feel but sometimes don’t say.
+
+One day, when we finally meet, I won’t send you a virtual rose😊💞💞💖. I’ll bring it myself💕💗💟💟💞. I’ll stand in front of my Shehzadii💞💗💗, smile nervously, and give you a rose with my own hands🥺💞💟. And maybe hug you right after that. 🌹🌹🌹
+
+Until that day comes, this rose is yours, Cuteoo. Always
+      </p>
+
+      <p class="paragraph reveal">
+        You don't need a crown💖💞😊 because being you is royal enough💞💞💕💖. Thank you for letting me say your name a thousand times in my head🫠💕💞💞.
+      </p>
+
+      <div class="links reveal">
+        <a class="link-btn" href="index.html">⬅ Back Home</a>
+      </div>
+    </div>
+
+    <aside class="hero-right">
+      <div class="card reveal">
+        <div class="sm">
+          For you: a rose, a whisper, and my promise to keep trying to be better 🌹 for you.
+        </div>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<audio id="bgm" src="song.mp3" loop preload="none"></audio>
+
+<!-- ✅ Play / Pause Script Added (for playToggle button) -->
+<script>
+const audio = document.getElementById("bgm");
+const btn = document.getElementById("playToggle");
+
+btn.addEventListener("click", function() {
+  if (audio.paused) {
+    audio.play();
+    btn.textContent = "Pause ❚❚";
+  } else {
+    audio.pause();
+    btn.textContent = "Play ♫";
+  }
+});
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

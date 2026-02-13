@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Promise Day — Hadia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="promise">
+
+<header class="header">
+  <div class="brand">Pookiee 🤞<small>— Promise Day</small></div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <button id="audioControl">Play ♫</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="hero-left">
+      <h2 class="h-title reveal">My promises to you, Miss Khan</h2>
+      <div class="h-sub reveal" data-type="I won’t promise perfection🫠💌 — I’ll promise presence💝💗💗, effort and honesty💕💓."></div>
+
+      <p class="paragraph reveal">
+       Haduu, on this Promise Day,💌💟 
+       I just want to tell you something from my heart.
+        I promise to always love you,💞💓💝💌 no matter how far apart we are.
+         I promise to wait patiently for the day we finally meet💌💞💗. And most importantly…
+          I promise that you are the one 💗💞💝I will make my bride🥺💕💟💗 — we are not just
+           dating; we are💗💟💟💕💞💞 dating to get married.
+
+Every day without you makes me realize how much you mean to me💓💕💗💗.
+ I imagine holding your hand💝💗💗💓💓💕, seeing your smile,💕💓💗💝 feeling your warmth…💗💝💓💕💟 
+ and it makes my heart ache in the sweetest way💟💕💕💕. One day, when I finally hold you in my arms💟💕💓💞🥺AHhh jab b ya line 
+ arms wali use kar rha houn that feel 🥺🥺💞💞💓,
+  all these promises won’t just be words💓💞💞💌 — you’ll feel how deeply 💕💟I love you💟💕💗,
+   how much I’ve been dreaming of this moment.💕💝 Until that day comes, every heartbeat
+, every thought,💝💝💕💕💗💗💟💌💟 and every little wish of mine is all for you, my Shehzadii. 💖
+      </p>
+
+      <div class="links reveal">
+        <a class="link-btn" href="index.html">⬅ Back Home</a>
+      </div>
+    </div>
+
+    <aside class="hero-right">
+      <div class="card reveal">
+        <div class="sm">
+          I keep my promises💞💕💕 because I want your trust and your smile more than anything🫠💌💝💝💗💞.
+        </div>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<audio id="bgm" src="song1.mp3" loop preload="none"></audio>
+
+<!-- ✅ Play / Pause Script Added -->
+<script>
+const audio = document.getElementById("bgm");
+const btn = document.getElementById("audioControl");
+
+btn.addEventListener("click", function() {
+  if (audio.paused) {
+    audio.play();
+    btn.textContent = "Pause ❚❚";
+  } else {
+    audio.pause();
+    btn.textContent = "Play ♫";
+  }
+});
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

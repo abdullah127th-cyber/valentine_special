@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Welcome My Queen — Hadia</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ====== Small mobile-only styles for the floating audio button ====== -->
+  <style>
+    /* hide by default, show on small screens only */
+    .mobile-audio-btn{ display:none; }
+    @media (max-width:880px){
+      .mobile-audio-btn{
+        display:flex;
+        position:fixed;
+        right:16px;
+        bottom:16px;
+        z-index:999;
+        align-items:center;
+        justify-content:center;
+        gap:8px;
+        padding:10px 13px;
+        border-radius:999px;
+        font-weight:800;
+        font-size:15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+        cursor:pointer;
+        border:none;
+        background: linear-gradient(90deg,#ff3b6b,#ff7aa2);
+        color: #fff;
+      }
+      /* a slightly smaller button on very small screens */
+      @media (max-width:420px){
+        .mobile-audio-btn{ padding:9px 11px; font-size:14px; right:12px; bottom:12px; }
+      }
+    }
+  </style>
+</head>
+<body data-page="home">
+
+<header class="header">
+  <div class="brand">
+    Pookiee ❤️<small>— Ki Taraf say🫠💗</small>
+  </div>
+
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="rose.html">Rose</a>
+    <a href="propose.html">Propose</a>
+    <a href="chocolate.html">Chocolate</a>
+    <a href="teddy.html">Teddy</a>
+    <a href="promise.html">Promise</a>
+    <a href="hug.html">Hug</a>
+    <a href="kiss.html">Kiss</a>
+    <a href="valentine.html">Valentine</a>
+    <a href="sorry.html">Sorry</a>
+    <button id="audioControl">Play ♫</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="hero-left">
+      <h1 class="h-title reveal">Welcome, my Queen — <span id="nickname">Cuteoo</span></h1>
+      <div class="h-sub reveal" data-type="This little website is my heart in code. Each page is a tiny letter to you, written with love."></div>
+
+      <p class="paragraph reveal">
+        Hey Jaan — I wrote these words the way I'd say them in the quiet moments: 
+        Haduu, I don’t even know how to start this💞💗💖💟💟. We haven’t met yet💟💖💖💗💗💗💖. 
+        We haven’t sat together💗💗💖💟, we haven’t walked side by side. 
+        But somehow, you mean so much to me. 
+        It’s crazy how someone so far away can feel so close to my heart.
+      </p>
+
+      <p class="paragraph reveal">
+        Pabloo Mari, I am waiting with so much patience for the day we finally meet💞💕🥺. 
+        I am very patiently waiting for the day qasmii Jab we finally meet💗💖💖.
+        I imagine it all the time💟💟💗. The first thing I’ll do is hug you tight💕💞
+         — not for a second, 
+        💞💕💖💗but like I’ve been waiting my whole life for that moment. 
+        And then, I’ll sit close to you💟🫠💖💗, look at you properly,
+         and tell you how deeply I’m in love with you.
+         Not in a dramatic way. Just honestly. From my heart. 
+         My Shehzadii, this distance is only temporary — but my love for you is forever.
+      </p>
+
+      <div class="links reveal">
+        <a class="link-btn" href="rose.html">🌹 Rose Day</a>
+        <a class="link-btn" href="chocolate.html">🍫 Chocolate Day</a>
+        <a class="link-btn" href="teddy.html">🧸 Teddy Day</a>
+        <a class="link-btn" href="promise.html">🤞 Promise Day</a>
+        <a class="link-btn" href="hug.html">🤗 Hug Day</a>
+        <a class="link-btn" href="kiss.html">😘 Kiss Day</a>
+        <a class="link-btn" href="propose.html">💍 Propose Day</a>
+        <a class="link-btn" href="valentine.html">❤️ Valentine</a>
+        <a class="link-btn" href="sorry.html">🥺 Sorry</a>
+      </div>
+    </div>
+
+    <aside class="hero-right">
+      <div class="card reveal">
+        <div class="nickname">Life main Aik Chez Kabhi Na Bhulna</div>
+        <div class="sm">Muja ya nahi pata k ya kaisay hua kesy pura hoga but muja just itna pata hai jaan k jab tak zinda houn apka houn or sirf apka rahounga💗💖💞💞
+          agar life main kabhi aisa feel ho k main apko chor jaounga to aik bari sari wo calls wo mari emotional side and wo sab aik bari yad kar k soch lena k wo banda jis na apni mama k samny kah diya jaan hai marii 
+          wo.... wo apko chor k jayga..?? Naahhhh kabhi b nahi💞💞💖
+        </div>
+        <div class="sm">I am: your Pookiee,  Only Your Hubby, and only have Love for you, always.</div>
+      </div>
+      <div class="card reveal" style="margin-top:12px">
+        <div class="sm">Main Haduu Ka houn Haduu Ka Rahounga And Apni Haduu ko chor kar kahin b Nahi jaounga akely samj gain 💖💖💖💞💟
+          
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <p class="footer reveal">Built with love — Hope this makes you smile💟🫠 today :)</p>
+
+  <!-- optional audio (replace song.mp3 with your file). This will play after user enters nickname. -->
+  <audio id="bgm" src="song.mp3" loop preload="none"></audio>
+</main>
+
+<!-- MOBILE VISIBLE floating play/pause button (only shows on small screens) -->
+<button id="mobileAudioToggle" class="mobile-audio-btn" aria-label="Play or pause music">Play ♫</button>
+
+<script src="script.js"></script>
+
+<!-- ===== tiny script to wire the mobile button to the #bgm audio ===== -->
+<script>
+  (function(){
+    const bgm = document.getElementById('bgm');
+    const mobileBtn = document.getElementById('mobileAudioToggle');
+    const audioControlBtn = document.getElementById('audioControl'); // your existing nav button (kept unchanged)
+
+    if(!bgm || !mobileBtn) return;
+
+    // update labels to reflect current state
+    function updateLabels(){
+      if(bgm.paused){
+        mobileBtn.textContent = 'Play ♫';
+        if(audioControlBtn) audioControlBtn.textContent = 'Play ♫';
+      } else {
+        mobileBtn.textContent = 'Pause ⏸';
+        if(audioControlBtn) audioControlBtn.textContent = 'Pause ♫';
+      }
+    }
+
+    // toggle play/pause
+    function toggleAudio(){
+      if(bgm.paused){
+        bgm.play().catch(()=> {
+          // play may fail if user hasn't interacted — still update labels
+        }).finally(updateLabels);
+      } else {
+        bgm.pause();
+        updateLabels();
+      }
+    }
+
+    // clicks on mobile button toggle audio
+    mobileBtn.addEventListener('click', toggleAudio);
+
+    // keep labels in sync if audio is started/stopped elsewhere
+    bgm.addEventListener('play', updateLabels);
+    bgm.addEventListener('pause', updateLabels);
+    bgm.addEventListener('ended', updateLabels);
+
+    // if your existing audioControl button is used by script.js, also let it update our label:
+    if(audioControlBtn){
+      audioControlBtn.addEventListener('click', () => {
+        // small delay: script.js might start/pause audio; we sync after 120ms
+        setTimeout(updateLabels, 120);
+      });
+    }
+
+    // initialize label on load
+    document.addEventListener('DOMContentLoaded', updateLabels);
+    // also run once now in case DOM is already ready
+    updateLabels();
+  })();
+</script>
+</body>
+</html>

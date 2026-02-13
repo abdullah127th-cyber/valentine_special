@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kiss Day — Hadia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="kiss">
+
+<header class="header">
+  <div class="brand">Pookiee 😘<small>— Kiss Day</small></div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <button id="audioControl">Play ♫</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="hero-left">
+      <h2 class="h-title reveal">Sending you tiny kisses through the screen</h2>
+      <div class="h-sub reveal" data-type="Every kiss I can’t give right now is saved for the moment we’re together."></div>
+
+      <p class="paragraph reveal">
+        I wish I could be there right now💓💗💝, holding you close
+        , and kissing you softly💟💕💌💞💓💗 — the way my heart has💗💌💕💕 been dreaming
+         of since the day we met…💕💌💗💓 in our hearts💝💟💞. Cuteoo💞💘😘, just imagine all those 
+         kisses💝💟
+          I send you in my voice messages…🫠💕💌💗💓💞💞💞💓 now imagine how💓💞💗💌💘 many
+           I’ll give you in real life💘💌💌 when I finally see you💟💝🫠🫠. My Pabloo,
+            I’ll kiss you on your forehead, your cheeks, your lips… over
+             and over, until you can feel how much I adore you💝🫠💟💗💟💟💝.
+             This distance makes me💟💝💝🥺🥺 miss you even 
+, Shehzadii. But one day, when🥺🥺💝💝💟💟💘💞 I finally hold you in my arms,
+ all these little kisses won’t 💞💘💘💟💌💕just be in my imagination.
+  They’ll be real, soft, endless, and all 💟💟💕💌for you, my Haduu. 💖
+      </p>
+
+      <div class="links reveal">
+        <a class="link-btn" href="index.html">⬅ Back Home</a>
+      </div>
+    </div>
+
+    <aside class="hero-right">
+      <div class="card reveal">
+        <div class="sm">
+          Bhulna Mat: I counted 999😘 kisses and kept them in my pocket💗🫠 for you. 😘
+        </div>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<audio id="bgm" src="song.mp3" loop preload="none"></audio>
+
+<!-- ✅ Play / Pause Script Added -->
+<script>
+const audio = document.getElementById("bgm");
+const btn = document.getElementById("audioControl");
+
+btn.addEventListener("click", function() {
+  if (audio.paused) {
+    audio.play();
+    btn.textContent = "Pause ❚❚";
+  } else {
+    audio.pause();
+    btn.textContent = "Play ♫";
+  }
+});
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

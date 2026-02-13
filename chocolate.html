@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chocolate Day — Hadia</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="chocolate">
+
+<header class="header">
+  <div class="brand">Pookiee 🍫<small>— Chocolate Day</small></div>
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+
+    <!-- ✅ Play / Pause Button Added -->
+    <button id="audioControl" class="audio-btn">Play ♫</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="hero-left">
+      <h2 class="h-title reveal">Happy Chocolate Day, my Sweeto 🍫</h2>
+      <div class="h-sub reveal" data-type="Life is sweeter with you: warm, comforting and impossible to resist."></div>
+
+      <p class="paragraph reveal">
+    Honestly, I was thinking🤔… chocolate is sweet💞🫠, but have you ever realized 💞💟💟you’re sweeter than all of them combined💟💞💖💖💖💕💗😋? Cuteoo, tumhari smile kisi dairy milk se zyada melt kar💗💟 deti hai mujhe💖💕🫠.
+If I could, I’d bring you a big box of chocolates💕💗 and sit next to you while you eat them💗💕💞💟💗. But knowing you… you’d probably tease me and not share even one piece. And I’d still sit there smiling at my Shehzadii like an idiot.
+
+One day, when we finally meet💕💖, I’m not just bringing chocolates💟💖💕💕💗. I’m bringing 💗💖💕💕, forehead kisses💖💕, and maybe stealing one chocolate from your hand just to annoy you💗💕💖💖.
+
+Until then, remember this — you’re my favorite flavor, my favorite sweetness, my Haduu, My Wifey💕🥺💗 🤍🍫
+      </p>
+
+      <div class="links reveal">
+        <a class="link-btn" href="index.html">⬅ Back Home</a>
+      </div>
+    </div>
+
+    <aside class="hero-right">
+      <div class="card reveal">
+        <div class="sm">
+          Imagine💕💖💖: you🥺💗 + chocolate💗💗💕 + my stupid jokes😅💟 = perfect💟💕🫠😋.
+        </div>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<!-- Audio -->
+<audio id="bgm" src="song1.mp3" loop preload="none"></audio>
+
+<!-- ✅ Script for Play / Pause -->
+<script>
+const audio = document.getElementById("bgm");
+const btn = document.getElementById("audioControl");
+
+btn.addEventListener("click", function() {
+  if (audio.paused) {
+    audio.play();
+    btn.textContent = "Pause ❚❚";
+  } else {
+    audio.pause();
+    btn.textContent = "Play ♫";
+  }
+});
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>

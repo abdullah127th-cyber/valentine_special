@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sorry — Hadia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-page="sorry">
+
+<header class="header">
+  <div class="brand">Pookiee 🥺<small>— Sorry har us time k liya jab b apko hurt kiya is pookiee na😩😩💖</small></div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <button id="audioControl">Play ♫</button>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="hero-left">
+      <h2 class="h-title reveal">I’m sorry, my little princess</h2>
+
+      <div class="h-sub reveal" data-type="I missed some days and I hate that. I’m trying — please forgive my messy timing."></div>
+
+      <p class="paragraph reveal">
+        I know I’ve messed up sometimes…😩🥺 missed days🥺💓, missed little moments👉🏻👈🏻🥺💕💟,
+         not surprised you the way I wanted😩💟🥺💝, or sometimes not noticing when 
+         you were upset💝🥺🥺. I’m sorry for all the times I annoyed you, for the times
+          I didn’t get your mood🥺💝💝💝💟💟💌💓 Dekhna jis din ya distance khtm hua us din k bad kabhi b apko bura feel nahi hony dounga abhi b i'll always try my best k apko hamesha smile karata rahoun apko is duniya ki tensions say dur rakhoun and always apki support main rahoun💓💌💟💟💟💌👉🏻👈🏻💕💖🫠, and 
+        for all those mistakes from the past that made you hurt… they were never meant to hurt you.
+      </p>
+
+      <p class="paragraph reveal">
+        Forgive me? Please — this heart is small and stubborn and only wants you to smile again.
+      </p>
+
+      <div class="forgive-area reveal">
+        <div class="forgive-text">Will you forgive me?</div>
+        <div class="forgive-buttons">
+          <button id="forgiveYes" class="btn btn-yes">Yes 💖</button>
+          <button id="forgiveNo" class="btn btn-no">Not now</button>
+        </div>
+        <a class="link-btn" href="index.html" style="margin-top:12px; display:inline-block;">⬅ Back Home</a>
+      </div>
+
+    </div>
+
+    <aside class="hero-right">
+      <div class="card reveal">
+        <div class="sm">I count my mistakes so I can be better for you. Thank you for putting up with me.</div>
+      </div>
+    </aside>
+  </section>
+</main>
+
+<button id="mischiefOk" class="ok-btn" aria-hidden="true">OK</button>
+
+<div id="smileModal" class="smile-modal" aria-hidden="true">
+  <div class="smile-inner">
+    <div id="smileHearts" class="smile-hearts"></div>
+    <div id="smileEmoji" class="smile-emoji">😊</div>
+    <div id="smileText" class="smile-text typewriter" data-type="You made my world brighter — please smile for me, Hadia."></div>
+    <div style="margin-top:14px">
+      <button id="smileClose" class="link-btn">I smiled 😊</button>
+    </div>
+  </div>
+</div>
+
+<audio id="bgm" src="song.mp3" loop preload="none"></audio>
+
+<!-- ✅ Play / Pause Script Added -->
+<script>
+const audio = document.getElementById("bgm");
+const btn = document.getElementById("audioControl");
+
+btn.addEventListener("click", function() {
+  if (audio.paused) {
+    audio.play();
+    btn.textContent = "Pause ❚❚";
+  } else {
+    audio.pause();
+    btn.textContent = "Play ♫";
+  }
+});
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
